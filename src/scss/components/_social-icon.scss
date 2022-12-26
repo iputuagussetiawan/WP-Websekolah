@@ -1,0 +1,31 @@
+@use "../config/variable" as *;
+.social-icons{
+    margin: 0px;
+    list-style: none;
+    padding: 0;
+    &__item{
+        display: inline-block;
+        margin-right: 16px;
+        border: 1px solid $neutral-40;
+        border-radius: 100%;
+        transition: 0.4s ease;
+
+        &:hover{
+            border: 1px solid $primary;
+        }
+    }
+
+    &__link{
+        display: inline-block;
+        color: $primary;
+        width: 60px;
+        height: 60px;
+        line-height: 68px;
+        font-size: 24px;
+        text-align: center;
+    }
+
+    &__icon{
+        vertical-align: middle;
+    }
+}

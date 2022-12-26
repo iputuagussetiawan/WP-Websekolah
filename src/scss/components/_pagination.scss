@@ -1,0 +1,70 @@
+@use "../config/_mixin.scss" as *;
+@use "../config/_variable.scss" as *;
+
+
+.pagination{
+    .page-item{
+        margin: 0px 5px;
+    }
+                                       
+    .page-link.active, .active > .page-link {
+        z-index: 3;
+        color: $primary;
+        background: transparent;
+        border:none;
+        border-radius: 0px;
+    }
+
+    .page-link {
+        font-size: 21px;
+        padding: 13px 16px;
+        border: none;
+        background-color: transparent;
+        border-radius: none;
+        color: #454550;
+    }
+
+    .page-link.next,
+    .page-link.prev
+    {
+        width: 32px;
+        height: 55px;
+        text-align: center;
+        vertical-align: middle;
+        padding: 17px 8px 8px 8px;
+    }
+
+    .page-item:first-child .page-link {
+       border-radius: 0px;
+    }
+
+    .page-item:last-child .page-link {
+        border-radius: 0px;
+    }
+
+    &__detail{
+        font-weight: 500;
+        font-size: 21px;
+        line-height: 32px;
+        color: #777777;
+    }
+
+    @media only screen and (max-width: 1399.98px) {
+        .page-link {
+            font-size: 18px;
+        }
+        &__detail{
+            font-size: 18px;
+        }
+       
+    }
+
+    @media only screen and (max-width: 991.98px) {
+        .page-link {
+            font-size: 16px;
+        }
+        &__detail{
+            font-size: 16px;
+        }
+    }
+}

@@ -1,0 +1,37 @@
+@use  '../config/_variable.scss' as *;
+@use  '../config/_mixin.scss' as *;
+@use '../components/cards/card-post' as *;
+
+.articles{
+    position: relative;
+    overflow: hidden;
+    &__bg{
+        position: absolute;
+        z-index: -1;
+    }
+    &__grid{
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 33.89px 32px;
+        z-index: 1;
+    }
+
+    @media only screen and (max-width: 1399.98px) {
+        &__grid{
+            grid-template-columns: repeat(3,1fr);
+        }
+    }
+
+    @media only screen and (max-width: 991.98px) {
+        &__grid{
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+
+    @media only screen and (max-width: 575.98px) {
+        &__grid{
+            grid-template-columns: repeat(1,1fr);
+        }
+    }
+}

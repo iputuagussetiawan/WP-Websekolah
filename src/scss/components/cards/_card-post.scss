@@ -1,0 +1,132 @@
+@use "../../config/_variable.scss" as *;
+@use "../../config/_mixin.scss" as *;
+
+.card-post{
+    @include imageRatio(380,295);
+    border-radius: 16px;
+    border: 1px solid #E5E5E5;
+    background-color: $white;
+    transition: 0.4s ease;
+
+
+    &:hover{
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.16);
+    }
+
+    &__image-container{
+        border-radius: 16px;
+        overflow: hidden;
+    }
+
+    &__info-container{
+        padding: 18px 36px 34px 36px;
+    }
+
+    &__item-container{
+        margin-bottom: 18px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__date,
+    &__read-duration{
+        margin: 0px;
+        font-weight: 400;
+        font-size: 21px;
+        line-height: 32px;
+        color: #777777;
+    }
+
+    &__title{
+        @include elypsis($font-size: 24, $lines-to-show: 2, $line-height : 36px);
+        margin-bottom: 10px;
+        font-weight: 600;
+        color: #454550;
+    }
+
+    &__content{
+        @include elypsis($font-size: 21, $lines-to-show: 3, $line-height : 32px);
+        font-weight: 400;
+        color: #777777;
+    }
+
+    &__detail{
+        list-style: none;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    &__detail-item{
+        position: relative;
+        margin-bottom: 8px;
+        padding-left: 27px;
+    }
+
+    &__detail-icon{
+        position: absolute;
+        left: 0px;
+        top: 4px;
+    }
+
+
+    @media only screen and (max-width: 1600px) {
+        &__info-container{
+            padding: 16px 24px 24px 24px;
+        }
+        &__date,
+        &__read-duration{
+            font-size: 16px;
+        }
+        &__item-container{
+            margin-bottom: 8px;
+        }
+        &__title{
+            @include elypsis($font-size: 18, $lines-to-show: 2, $line-height : 28px);
+        }
+        &__content{
+            @include elypsis($font-size: 16, $lines-to-show: 3, $line-height : 28px);
+        }
+    }
+
+    // @media only screen and (max-width: 1399.98px) {
+    //     &__info-container{
+    //         padding: 16px 27px 27px 27px;
+    //     }
+    //     &__date,
+    //     &__read-duration{
+    //         font-size: 19px;
+    //     }
+    //     &__title{
+    //         @include elypsis($font-size: 22, $lines-to-show: 2, $line-height : 32px);
+    //     }
+    
+    //     &__content{
+    //         @include elypsis($font-size: 18, $lines-to-show: 3, $line-height : 32px);
+    //     }
+    // }
+
+    // @media only screen and (max-width: 1199.98px) {
+    //     &__info-container{
+    //         padding: 16px 24px 24px 24px;
+    //     }
+    //     &__date,
+    //     &__read-duration{
+    //         font-size: 18px;
+    //     }
+    //     &__title{
+    //         @include elypsis($font-size: 20, $lines-to-show: 2, $line-height : 32px);
+    //     }
+    
+    //     &__content{
+    //         @include elypsis($font-size: 16, $lines-to-show: 3, $line-height : 32px);
+    //     }
+    // }
+
+    // @media only screen and (max-width: 991.98px) {
+    //     &__date,
+    //     &__read-duration{
+    //         font-size: 16px;
+    //     }
+    // }
+}
+

@@ -1,0 +1,316 @@
+@use "../config/variable" as *;
+
+.btn-wrapper{
+    width: 100%;
+    height: 50px;
+}
+
+.btn{
+    display: inline-block;
+    padding: 12px 32px ;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 30px;
+    border-radius: 6px;
+
+    &:hover{
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.12);
+    }
+
+    &.ja{
+        font-size: 13px;
+    }
+
+    @media only screen and (max-width: 1199.98px) {
+        padding: 8px 16px;
+        font-size: 16px;
+    }
+}
+
+.btn-primary{
+    color: $white;
+    background:$primary;
+    border-color: $primary;
+    &:hover{
+        color: $white;
+        background: linear-gradient(143.47deg,#00c2cb,#00c2cb 120.11%) !important;
+        border-color: $primary;
+    }
+
+    &:focus,
+    &:active{
+        color: $white !important;
+    }
+    &.disabled {
+        color: $white;
+    }
+}
+
+.btn-primary-custom{
+    padding: 12px 24px;
+    display: inline-block;
+    background: $primary;
+    color: $white;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 18px;
+    transition: unset;
+    &:hover{
+        background: linear-gradient(143.47deg,#0be3b2,#00c2cb 120.11%);
+        color: $white;
+    }
+    @media only screen and (max-width: 575.98px) {
+        font-size: 14px;
+    }
+}
+
+.btn-appstore{
+    display: inline-block;
+    border: 1px solid #00C2CB;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    &:hover{
+        background: linear-gradient(143.47deg,#0be3b2,#00c2cb 120.11%);
+        color: $white;
+    }
+    &:hover path{
+       fill: $white;
+    }
+
+    &:hover img{
+        filter: invert(100%) sepia(100%) saturate(20%) hue-rotate(326deg) brightness(106%) contrast(105%);
+    }
+}
+
+
+.btn-login-mobile{
+    display: none;
+    @media only screen and (max-width: 1199.98px) {
+        display: inline-block;
+    }
+}
+
+.btn-secondary{
+    background-color:$secondary-80;
+    color: $primary;
+    border-color: $secondary-80;
+    &:hover{
+        background-color: $secondary-hover;
+        border-color: $secondary-hover;
+    }
+}
+
+.btn-warning{
+    background: #C19E74;
+    border: 1px solid #C19E74;
+    color: $white;
+    border: 1px solid #C19E74;
+    &:hover{
+        background-color: $white;
+        border: 1px solid #C19E74;
+        color: #C19E74;
+    }
+}
+
+.btn-warning-two{
+    background: #BA8A51;
+    border: 1px solid #BA8A51;
+    color: $white;
+    &:hover{
+        background-color: $white;
+        border: 1px solid #be9665;
+        border: 1px solid #be9665;
+        color:#BA8A51;
+    }
+}
+
+.btn-success{
+    background-color:  #16B056;
+    border: 1px solid  #16B056;
+    color: $white;
+    &:hover{
+        background-color: $white;
+        border: 1px solid  #16B056;
+        color: #16B056;
+    }
+}
+
+
+
+.btn-ripple {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    span {
+        position: absolute;
+        background: $white;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+        border-radius: 50%;
+        animation: ripple 1s linear infinite;
+    }
+}
+
+.whatapp-btn{
+    display: inline-block;
+    position: fixed;
+    bottom: 70px;
+    right: -100px;
+    width: 54px;
+    height: 54.32px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #0A990A;
+    border-radius: 16px 0 0 16px; ;
+    z-index: 100;
+    transition: 0.4s ease;
+
+    &:hover{
+        background-color: #11b911;
+    }
+    &.active{
+        right: 0px;
+    }
+
+    @media only screen and (max-width: 575.98px) {
+        display: none;
+    }
+}
+
+.scrolltop-btn{
+    display: inline-block;
+    position: fixed;
+    bottom: 130px;
+    right: -100px;
+    width: 54px;
+    height: 54.32px;
+    line-height: 50px;
+    text-align: center;
+    background-color: $black;
+    border-radius: 16px 0 0 16px; ;
+    z-index: 100;
+    transition: 0.4s ease;
+
+    &:hover{
+        background-color: #131212;
+    }
+    &.active{
+        right: 0px;
+    }
+
+    @media only screen and (max-width: 575.98px) {
+        display: none;
+    }
+}
+
+@keyframes ripple {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 0.5;
+    }
+    100% {
+        width: 500px;
+        height: 500px;
+        opacity: 0;
+    }
+}
+
+
+/*-----------------------------------------
+//////////////// WHATAPPS /////////////////
+-----------------------------------------*/
+
+.btn-show-more,
+.btn-show-less{
+    position: relative;
+    z-index: 100;
+    display: inline-block;
+    border: none;
+    margin: 0;
+    text-decoration: none;
+    background: transparent;
+    color: #0BAC4B;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+
+    @media only screen and (max-width: 575.98px) {
+        font-size: 10px;
+    }
+}
+
+.button-gotop{
+    transition: all .3s cubic-bezier(0,1.01,.4,1.9);
+    filter: drop-shadow(0 5px 5px rgba(0,0,0,.15));
+    opacity: 0;
+    transition: 0.4s ease;
+
+    &.active{
+        opacity: 1;
+    }
+    @media only screen and (max-width: 767.98px) {
+        &__icon{
+            width: 40px;
+            height: 40px;
+        }
+    }
+}
+
+.button-wa{
+    transition: all .3s cubic-bezier(0,1.01,.4,1.9);
+    filter: drop-shadow(0 5px 5px rgba(0,0,0,.15));
+
+    @media only screen and (max-width: 767.98px) {
+        &__icon{
+            width: 40px;
+            height: 40px;
+        }
+    }
+}
+
+.button-footer{
+    display: grid;
+    grid-template-columns: 56px;
+    gap: 18px;
+    position: fixed;
+    right: 60px;
+    bottom: 156px;
+    z-index: 2000;
+
+    @media only screen and (max-width: 767.98px) {
+        grid-template-columns: 32px;
+        gap: 18px;
+        right: 32px;
+        bottom: 139px;
+    }
+}
+
+.mobile-chat-container {
+    background-color: #0be3b2!important;
+    bottom: 80px!important;
+    right: 60px!important;
+
+    @media only screen and (max-width: 767.98px) {
+        right: 28px!important;
+        padding: 8px!important;
+        width: 22px!important;
+        height: 24px!important;
+        box-shadow: none;
+
+        .fa-comments {
+            position: relative;
+            top: -8px;
+            width: 20px;
+            height: 20px;
+            background-repeat: no-repeat;
+            background-size: 20px 20px ;
+            vertical-align: middle;
+           
+        }
+    }
+}
+
+

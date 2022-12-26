@@ -1,0 +1,27 @@
+@use "../config/_variable.scss" as *;
+
+.menu-mobile{
+    .menu-item{
+        .nav-link{
+            margin: 20px 0 20px 30px;
+            font-size: 16px;
+            font-weight: 600;
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+    }
+    .pll-parent-menu-item{
+        order: unset;
+        & > a{
+            &::before{
+                left: 24px;
+            }
+        }
+    }
+
+    &__app-container{
+        margin-top: 100px;
+        margin-left: 30px;
+        margin-bottom: 80px;
+    }
+}
