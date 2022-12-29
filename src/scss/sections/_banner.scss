@@ -49,6 +49,8 @@
         align-items: center;
         height: 60vh;
         min-height: 550px;
+        padding-left: 15px;
+        margin-left: 5%;
         background-color: $white;
     }
     &__categories{
@@ -109,7 +111,7 @@
     }
 
     &__info-container{
-        grid-column: 2/7;
+        grid-column: 1/6;
         grid-row: 1;
         position: relative;
         z-index: 1;
@@ -118,7 +120,7 @@
     &__image-container{
         height: 100%;
 		min-height: 550px;
-        grid-column: 6/-1;
+        grid-column: 5/-1;
         grid-row: 1;
         background-color: $white;
        

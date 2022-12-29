@@ -15,13 +15,13 @@ class Testimonial {
             slidesPerView: 1,
                 spaceBetween: 30,
                 dynamicBullets: true,
-                loop: true,
+                loop: false,
                 breakpoints: {
-                    1024: {
-                        slidesPerView: 4,
-                    },
                     768: {
                         slidesPerView: 2,
+                    },
+                    1024: {
+                        slidesPerView: 4,
                     },
                 },
                 pagination: {

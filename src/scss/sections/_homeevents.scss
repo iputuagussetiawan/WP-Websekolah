@@ -1,0 +1,14 @@
+
+@use '../config/_variable.scss' as *;
+@use '../config/_mixin.scss' as *;
+@use '../components/cards/_card-events.scss' as *;
+@use '../base/_animations.scss' as *;
+
+.homevents{
+    &__grid{
+        margin-bottom: 42px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+    }
+}

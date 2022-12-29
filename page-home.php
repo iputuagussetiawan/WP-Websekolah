@@ -46,6 +46,7 @@
     get_template_part('template-parts/sections/home', 'programstudi');
     get_template_part('template-parts/sections/home', 'testimonial');
     get_template_part('template-parts/sections/home', 'news');
+    get_template_part('template-parts/sections/home', 'events');
     ?>
 
     <!-- <section class="home-welcome section-padding">

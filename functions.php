@@ -36,7 +36,7 @@ function tmdr_script_enqueue()
 
 
     if (is_single()) {
-        wp_enqueue_script('locationmap_js', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDyb8Y0Cy8KdZTUmCpJ9F7DY6-PtKW3Oww', array(), $themeVersion, true);
+        wp_enqueue_script('locationmap_js', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDfGcaDJ1vOSxuxARS_kOVEmN-SOxVfIBw', array(), $themeVersion, true);
         wp_enqueue_style('single-css', get_template_directory_uri() . '/build/css/single.css', array(), $themeVersion, 'all');
         wp_enqueue_script('single-js', get_template_directory_uri() . '/build/js/single.js', array(), $themeVersion, true);
     }
@@ -126,3 +126,10 @@ function GetYouTubeId($url)
     $youtube_id = $match[1];
     return $youtube_id;
 }
+// Method 1: Filter.
+function my_acf_google_map_api($api)
+{
+    $api['key'] = 'AIzaSyDfGcaDJ1vOSxuxARS_kOVEmN-SOxVfIBw';
+    return $api;
+}
+add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');

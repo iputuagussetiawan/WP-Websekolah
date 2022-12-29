@@ -16,22 +16,8 @@ $whatsapp_number = get_field('whatsapp_number', 'company-setting');
 $phone_number = get_field('phone_number', 'company-setting');
 ?>
 
-<div class="button-footer">
-    <a href="#" class="button-gotop">
-        <svg class="button-gotop__icon" width="56" height="56" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M70 35C70 15.67 54.33 0 35 0C15.67 0 0 15.67 0 35C0 54.33 15.67 70 35 70C54.33 70 70 54.33 70 35Z" fill="#766EC8"></path>
-            <path d="M36.0736 42.0001V29.4101L39.3962 32.7101C39.5864 32.8984 39.8443 33.0042 40.1133 33.0042C40.3822 33.0042 40.6402 32.8984 40.8303 32.7101C41.0205 32.5218 41.1273 32.2664 41.1273 32.0001C41.1273 31.7338 41.0205 31.4784 40.8303 31.2901L35.7807 26.2901C35.5869 26.1088 35.3303 26.0078 35.0637 26.0078C34.797 26.0078 34.5405 26.1088 34.3466 26.2901L29.297 31.2901C29.1068 31.4784 29 31.7338 29 32.0001C29 32.2664 29.1068 32.5218 29.297 32.7101C29.4872 32.8984 29.7451 33.0042 30.014 33.0042C30.283 33.0042 30.5409 32.8984 30.7311 32.7101L34.0537 29.4101V42.0001C34.0537 42.2653 34.1601 42.5197 34.3495 42.7072C34.5389 42.8948 34.7958 43.0001 35.0637 43.0001C35.3315 43.0001 35.5884 42.8948 35.7778 42.7072C35.9672 42.5197 36.0736 42.2653 36.0736 42.0001Z" fill="white"></path>
-        </svg>
-    </a>
-    <a href="https://wa.me/<?= $phone_number; ?>" target="_blank" rel="noreferrer noopener nofollow" class="button-wa">
-        <svg class="button-wa__icon" width="56" height="56" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M70 35C70 15.67 54.33 0 35 0C15.67 0 0 15.67 0 35C0 54.33 15.67 70 35 70C54.33 70 70 54.33 70 35Z" fill="#0BE3B2"></path>
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M49 20.75C45.25 17 40.25 15 35 15C24 15 15 24 15 35C15 38.5 16 42 17.75 45L15 55L25.5 52.25C28.5 53.75 31.75 54.75 35 54.75C46 54.75 55 45.75 55 34.75C55 29.5 52.75 24.5 49 20.75ZM35 51.5C32 51.5 29 50.75 26.5 49.25L26 49L19.75 50.75L21.5 44.75L21 44C19.25 41.25 18.5 38.25 18.5 35.25C18.5 26.25 26 18.75 35 18.75C39.5 18.75 43.5 20.5 46.75 23.5C50 26.75 51.5 30.75 51.5 35.25C51.5 44 44.25 51.5 35 51.5ZM44 39C43.5 38.75 41 37.5 40.5 37.5C40 37.25 39.75 37.25 39.5 37.75C39.25 38.25 38.25 39.25 38 39.75C37.75 40 37.5 40 37 40C36.5 39.75 35 39.25 33 37.5C31.5 36.25 30.5 34.5 30.25 34C30 33.5 30.25 33.25 30.5 33C30.75 32.75 31 32.5 31.25 32.25C31.5 32 31.5 31.75 31.75 31.5C32 31.25 31.75 31 31.75 30.75C31.75 30.5 30.75 28 30.25 27C30 26.25 29.5 26.25 29.25 26.25C29 26.25 28.75 26.25 28.25 26.25C28 26.25 27.5 26.25 27 26.75C26.5 27.25 25.25 28.5 25.25 31C25.25 33.5 27 35.75 27.25 36.25C27.5 36.5 30.75 41.75 35.75 43.75C40 45.5 40.75 45 41.75 45C42.75 45 44.75 43.75 45 42.75C45.5 41.5 45.5 40.5 45.25 40.5C45 39.25 44.5 39.25 44 39Z" fill="white"></path>
-        </svg>
-    </a>
-</div>
 <footer class="footer section-padding--top">
-    <div class="backtop">
+    <div class="backtop button-gotop">
         <span></span>
         <span></span>
         <p>back to top</p>
@@ -50,22 +36,6 @@ $phone_number = get_field('phone_number', 'company-setting');
             </div>
             <div class="footer__social-icon">
                 <ul class="social-icons">
-                    <!-- <li class="social-icons__item">
-                        <a href="" class="social-icons__link">
-                            <iconify-icon icon="ri:facebook-fill"></iconify-icon>
-                        </a>
-                    </li>
-                    <li class="social-icons__item">
-                        <a href="" class="social-icons__link">
-                            <iconify-icon icon="mdi:instagram"></iconify-icon>
-                        </a>
-                    </li>
-                    <li class="social-icons__item">
-                        <a href="" class="social-icons__link">
-                            <iconify-icon icon="ri:linkedin-fill"></iconify-icon>
-                        </a>
-                    </li> -->
-
                     <?php
                     if (have_rows('social_icons_list', 'company-setting')) :
                         while (have_rows('social_icons_list', 'company-setting')) : the_row();
