@@ -4,18 +4,15 @@
 
 .footer {
     background-color: $neutral-20;
-
     .navbar-brand{
         padding: 0px;
     }
-
     &__grid{
         display: grid;
         grid-template-columns: 3fr 2fr 1fr;
         column-gap: 8%;
         row-gap: 24px;
     }
-
     &__title{
         text-transform: uppercase;
         font-size: 23px;
@@ -23,7 +20,6 @@
         color: $neutral-80;
         margin-bottom: 24px;
     }
-
     &__logo-container{
         grid-column: 1/2;
         grid-row: 1;
@@ -49,10 +45,10 @@
         grid-column: 1/-1;
         grid-row: 4;
     }
-
     &__description-container{
-        font-size: 14px;
+        font-size: 16px;
         line-height: 1.7;
+        font-family: $secondary-font;
         p{
             margin-bottom: 0px;
         }
@@ -68,14 +64,12 @@
         padding-left: 28px;
         position: relative;
     }
-
     &__contact-icon{
         position: absolute;
         top: 4px;
         left: 0px;
         font-size: 20px;
     }
-
     &__contact-unlink{
         margin: 0px;
         color: $neutral-70;
@@ -87,17 +81,13 @@
             color: $primary;
         }
     }
-
-
     &__menu-list{
         padding: 0px;
         list-style: none;
     }
-
     &__menu-item{
         margin-bottom: 16px;
     }
-
     &__menu-link{
         font-size: 14px;
         color: $neutral-70;
@@ -108,7 +98,6 @@
             color: $primary;
         }
     }
-
     &__copyright{
         padding: 16px 0px;
         width: 100%;
@@ -116,5 +105,4 @@
         justify-content: space-between;
         border-top: 1px solid #d60e0033;
     }
-    
 }

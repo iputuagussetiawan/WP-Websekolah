@@ -1,0 +1,57 @@
+@use "../../config/_variable.scss" as *;
+@use "../../config/_mixin.scss" as *;
+
+.card-programstudi{
+    position: relative;
+    @include imageRatio(1020,500);
+    overflow: hidden;
+
+    &:hover  &__image{
+        transform: scale(1.2);
+    }
+
+    &:hover  &__info-container{
+        bottom: 0px;
+    }
+
+    &__image-container{
+        position: relative;
+        overflow: hidden;
+        &::after {
+            content: "";
+            position: absolute;
+            top: 20%;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: linear-gradient(0deg, black 3%, rgba(255, 255, 255, 0) 100%);
+        }
+    }
+    &__image{
+        transition: 1s ease;
+    }
+
+    &__info-container{
+        padding: 32px 42px;
+        position: absolute;
+        bottom: -87px;
+        right: 0px;
+        left: 0px;
+        z-index: 2;
+        transition: 0.4s ease;
+    }
+
+    &__title{
+        margin-bottom: 32px;
+        font-size: 37px;
+        color: $white;
+        text-transform: uppercase;
+        letter-spacing: 1.7px;
+    }
+
+    &__content{
+        @include elypsis($font-size: 18, $lines-to-show: 2, $line-height : 1.7);
+        color: $white;
+        font-family: $secondary-font;;
+    }
+}

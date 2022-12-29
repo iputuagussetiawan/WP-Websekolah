@@ -11378,8 +11378,9 @@ main {
   grid-row: 4;
 }
 .footer__description-container {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.7;
+  font-family: "Open Sans", sans-serif;
 }
 .footer__description-container p {
   margin-bottom: 0px;
@@ -11438,7 +11439,7 @@ main {
 
 :root {
   --section-padding: 100px;
-  --margin-bottom-title-wrapper: 70px;
+  --margin-bottom-title-wrapper: 50px;
   --font-size-section-title: 40px;
   --line-height-section-title: 50px;
   --font-size-section-title-description: 18px;
@@ -11448,13 +11449,12 @@ main {
 @media only screen and (max-width: 1399.98px) {
   :root {
     --section-padding: 80px;
-    --margin-bottom-title-wrapper: 64px;
+    --margin-bottom-title-wrapper: 42px;
   }
 }
 @media only screen and (max-width: 1199.98px) {
   :root {
     --section-padding: 60px;
-    --margin-bottom-title-wrapper: 50px;
     --font-size-section-title: 37px;
     --line-height-section-title: 42px;
     --font-size-section-title-description: 16px;
@@ -11464,7 +11464,6 @@ main {
   :root {
     --section-padding: 40px;
     --font-size-section-title: 32px;
-    --margin-bottom-title-wrapper: 42px;
   }
 }
 @media only screen and (max-width: 767.98px) {

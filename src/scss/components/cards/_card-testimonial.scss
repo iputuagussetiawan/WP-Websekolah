@@ -1,0 +1,65 @@
+@use "../../config/_variable.scss" as *;
+@use "../../config/_mixin.scss" as *;
+.card-testimonial{
+    @include imageRatio(64,64,true,contain,'user-image');
+    position: relative;
+    &__msg-container{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 24px;
+        border: 1px solid $neutral-30;
+        min-height: 250px;
+        font-size: 18px;
+        font-family: $secondary-font;
+        font-weight: 300;
+        line-height: 1.5;
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -11px;
+            left: 8%;
+            width: 20px;
+            height: 20px;
+            border-right: 1px solid $neutral-30;
+            border-bottom: 1px solid $neutral-30;
+            background: #ffffff;
+            transform: rotate(45deg);
+        }
+    }
+
+    &__user-image-container{
+        border-radius: 100%;
+        overflow: hidden;
+    }
+
+    &__icon{
+        position: absolute;
+        width: 64px;
+        top: 24px;
+        left: 24px;
+    }
+
+    &__info-container{
+        margin-top: 24px;
+        display:grid;
+        grid-template-columns: 64px auto;
+        gap: 16px;
+        align-items: center; 
+
+    }
+
+    &__user-name{
+        margin-bottom: 4px;
+        font-size: 18px;
+        color: $primary;
+    }
+
+    &__position{
+        margin-bottom: 0px;
+        font-size: 14px;
+        font-style: italic;
+        font-family: $secondary-font;
+    }
+}
