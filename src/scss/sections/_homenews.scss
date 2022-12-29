@@ -1,0 +1,28 @@
+
+@use '../config/_variable.scss' as *;
+@use '../config/_mixin.scss' as *;
+@use '../components/cards/_card-post.scss' as *;
+@use '../base/_animations.scss' as *;
+
+
+.homenews{
+    position: relative;
+    overflow: hidden;
+    &:before {
+		content: "";
+		position: absolute;
+		width: 200px;
+		max-width: 250px;
+		height: 500px;
+		border: 1px solid $red-200;
+		right: 0;
+		transform: translatey(-200px);
+		animation: beforeShape1 6s ease infinite alternate both;
+	}
+    &__grid{
+        margin-bottom: 42px;
+		gap: 32px;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+    }
+}

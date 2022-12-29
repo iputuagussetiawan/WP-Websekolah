@@ -2,7 +2,7 @@
     <div class="container position-relative">
         <div class="section-title-wrapper">
             <p class="section-subtitle">Testimonial</p>
-            <h2 class="section-title">Orang Tua</h2>
+            <h2 class="section-title">Kritik dan saran <br>dari orangtua/wali siswa</h2>
         </div>
         <div class="swiper testimonial">
             <div class="swiper-wrapper">

@@ -1,7 +1,22 @@
 @use '../config/_variable.scss' as *;
 @use '../config/_mixin.scss' as *;
+@use '../base/_animations.scss' as *;
 
 .welcome{
+	position: relative;
+	overflow: hidden;
+	background-color: $white;
+	&:before {
+		content: "";
+		position: absolute;
+		width: 200px;
+		max-width: 250px;
+		height: 500px;
+		border: 1px solid $red-200;
+		right: 0;
+		transform: translatey(-200px);
+		animation: beforeShape1 6s ease infinite alternate both;
+	}
 	@include imageRatio(879,494);
 	position: relative;
 	width: 100%;
@@ -26,8 +41,9 @@
 		box-shadow: 0px 14px 48px -6px rgba(0, 0, 0, 0.21);
 	}
 	&__media-container{
+		margin-bottom: 32px;
 		border-radius: 37px;
-		border: 24px solid $white;
+		border: 24px solid $neutral-25;
 		overflow: hidden;
 	}
 	&__image-container{

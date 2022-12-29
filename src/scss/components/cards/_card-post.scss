@@ -45,7 +45,8 @@
     }
 
     &__content{
-        @include elypsis($font-size: 21, $lines-to-show: 3, $line-height : 32px);
+        @include elypsis($font-size: 18, $lines-to-show: 3, $line-height : 32px);
+        margin-bottom: 24px;
         font-weight: 400;
         color: #777777;
     }
@@ -68,6 +69,21 @@
         top: 4px;
     }
 
+    &__author{
+        padding: 0px;
+        list-style: none;
+        margin-bottom: 0px;
+    }
+
+    &__author-item{
+        display: inline-block;
+        margin-right: 16px;
+        font-size: 14px;
+        &:last-child{
+            margin-right: 0px;
+        }
+    }
+
 
     @media only screen and (max-width: 1600px) {
         &__info-container{
@@ -87,46 +103,5 @@
             @include elypsis($font-size: 16, $lines-to-show: 3, $line-height : 28px);
         }
     }
-
-    // @media only screen and (max-width: 1399.98px) {
-    //     &__info-container{
-    //         padding: 16px 27px 27px 27px;
-    //     }
-    //     &__date,
-    //     &__read-duration{
-    //         font-size: 19px;
-    //     }
-    //     &__title{
-    //         @include elypsis($font-size: 22, $lines-to-show: 2, $line-height : 32px);
-    //     }
-    
-    //     &__content{
-    //         @include elypsis($font-size: 18, $lines-to-show: 3, $line-height : 32px);
-    //     }
-    // }
-
-    // @media only screen and (max-width: 1199.98px) {
-    //     &__info-container{
-    //         padding: 16px 24px 24px 24px;
-    //     }
-    //     &__date,
-    //     &__read-duration{
-    //         font-size: 18px;
-    //     }
-    //     &__title{
-    //         @include elypsis($font-size: 20, $lines-to-show: 2, $line-height : 32px);
-    //     }
-    
-    //     &__content{
-    //         @include elypsis($font-size: 16, $lines-to-show: 3, $line-height : 32px);
-    //     }
-    // }
-
-    // @media only screen and (max-width: 991.98px) {
-    //     &__date,
-    //     &__read-duration{
-    //         font-size: 16px;
-    //     }
-    // }
 }
 

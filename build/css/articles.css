@@ -61,12 +61,13 @@
 .card-post__content {
   display: block; /* Fallback for non-webkit */
   display: -webkit-box;
-  font-size: 21px;
+  font-size: 18px;
   line-height: 32px;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+  margin-bottom: 24px;
   font-weight: 400;
   color: #777777;
 }
@@ -84,6 +85,19 @@
   position: absolute;
   left: 0px;
   top: 4px;
+}
+.card-post__author {
+  padding: 0px;
+  list-style: none;
+  margin-bottom: 0px;
+}
+.card-post__author-item {
+  display: inline-block;
+  margin-right: 16px;
+  font-size: 14px;
+}
+.card-post__author-item:last-child {
+  margin-right: 0px;
 }
 @media only screen and (max-width: 1600px) {
   .card-post__info-container {

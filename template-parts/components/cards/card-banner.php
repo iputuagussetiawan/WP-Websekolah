@@ -1,7 +1,7 @@
 <div class="swiper-slide">
     <div class="banner__grid">
         <div class="banner__info-container">
-            <ul class="banner__categories">
+            <ul class="banner__categories element">
                 <?php
                 $icategories = 1;
                 $categories = get_the_category($post->ID);
@@ -17,8 +17,8 @@
                 endforeach;
                 ?>
             </ul>
-            <h2 class="banner__title"><?php echo wp_trim_words(get_the_title(), 10); ?></h2>
-            <ul class="banner__post-author">
+            <h2 class="banner__title element"><?php echo wp_trim_words(get_the_title(), 10); ?></h2>
+            <ul class="banner__post-author element">
                 <li class="banner__post-author-item">
                     <div class="banner__post-author-link">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
@@ -47,14 +47,14 @@
                     </a>
                 </li>
             </ul>
-            <p class="banner__description">
+            <p class="banner__description element">
                 <?php if (has_excerpt()) {
                     echo get_the_excerpt();
                 } else {
                     echo wp_trim_words(get_the_content(), 25);
                 } ?>
             </p>
-            <a href="<?php the_permalink(); ?>" class="banner__read-more">Read More</a>
+            <a href="<?php the_permalink(); ?>" class="banner__read-more element">Read More</a>
         </div>
         <div class="banner__image-container">
             <?php if (has_post_thumbnail()) : ?>

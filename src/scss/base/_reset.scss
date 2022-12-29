@@ -11,6 +11,7 @@ body {
 	font-family:$primary-font;
 	color: $neutral-70;
 	transition: 0.4s ease;
+	background-color: $neutral-25;
 	&.no-scroll {
 		overflow: hidden;
 	}

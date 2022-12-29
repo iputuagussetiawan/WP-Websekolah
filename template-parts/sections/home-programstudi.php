@@ -17,16 +17,15 @@
 //     $homeWelcomeImageALT = 'welcome image thumbnail';
 // }
 ?>
-<section class="programstudi section-padding">
+<section class="programstudi section-padding--top">
     <div class="container">
-        <div class="section-title-wrapper">
+        <div class="section-title-wrapper text-center">
+            <p class="section-subtitle"> Program Studi</p>
             <h2 class="section-title">
-                Program Studi
+                Jurusan/Program studi <br>Yang Dapat di pilih oleh siswa
             </h2>
         </div>
     </div>
-
-
     <div class="programstudi__grid">
         <?php
         $postPerPage = 4;

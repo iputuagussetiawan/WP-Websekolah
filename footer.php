@@ -31,6 +31,11 @@ $phone_number = get_field('phone_number', 'company-setting');
     </a>
 </div>
 <footer class="footer section-padding--top">
+    <div class="backtop">
+        <span></span>
+        <span></span>
+        <p>back to top</p>
+    </div>
     <div class="container">
         <div class="footer__grid">
             <div class="footer__logo-container">

@@ -10832,6 +10832,7 @@ body {
   font-family: "Poppins", sans-serif;
   color: #777777;
   transition: 0.4s ease;
+  background-color: #f6f8fd;
 }
 body.no-scroll {
   overflow: hidden;
@@ -10873,12 +10874,44 @@ a:hover {
 /*-----------------------------------------
 /////////////// STR ANIMATIONS ////////////
 -----------------------------------------*/
+@keyframes beforeShape1 {
+  0% {
+    transform: translate(50px, -200px);
+  }
+  100% {
+    transform: translate(0px, -280px);
+  }
+}
+@keyframes beforeShape2 {
+  0% {
+    transform: translate(-50px, 0px);
+  }
+  100% {
+    transform: translate(0px, 50px);
+  }
+}
 @keyframes beforeShape3 {
   0% {
     transform: translate(50px, 50px);
   }
   100% {
     transform: translate(0px, -50px);
+  }
+}
+@keyframes beforeShape5 {
+  0% {
+    transform: translate(-60%, 50px);
+  }
+  100% {
+    transform: translate(-50%, -50px);
+  }
+}
+@keyframes beforeShape6 {
+  0% {
+    transform: translate(0px, 150px);
+  }
+  100% {
+    transform: translate(50px, 180px);
   }
 }
 @keyframes pulse-border {
@@ -11334,7 +11367,7 @@ main {
 }
 
 .footer {
-  background-color: #F5F5F5;
+  background-color: #f6f8fd;
 }
 .footer .navbar-brand {
   padding: 0px;
@@ -11544,6 +11577,7 @@ main {
 .section-subtitle {
   margin-bottom: 4px;
   font-size: 18px;
+  color: #d60e00;
   text-transform: uppercase;
   letter-spacing: 1.5px;
 }
@@ -11968,113 +12002,19 @@ input[type=checkbox]:checked:disabled + label:before {
   }
 }
 
-.btn-primary {
-  color: #fff;
-  background: #d60e00;
-  border-color: #d60e00;
+.btn.btn-primary {
+  background-color: #d60e00;
+  border: none;
+  border-radius: 0;
+  padding: 13px 24px;
+  box-shadow: inset 0px 0px 0px 0px #ff4f42;
+  transition: box-shadow 0.4s ease-in-out;
 }
-.btn-primary:hover {
-  color: #fff;
-  background: linear-gradient(143.47deg, #00c2cb, #00c2cb 120.11%) !important;
-  border-color: #d60e00;
+.btn.btn-primary:hover {
+  box-shadow: inset 0px 0px 0px 1px #8e0900, inset 0px -56px 0px #8e0900;
 }
-.btn-primary:focus, .btn-primary:active {
-  color: #fff !important;
-}
-.btn-primary.disabled {
-  color: #fff;
-}
-
-.btn-primary-custom {
-  padding: 12px 24px;
-  display: inline-block;
-  background: #d60e00;
-  color: #fff;
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: 18px;
-  transition: unset;
-}
-.btn-primary-custom:hover {
-  background: linear-gradient(143.47deg, #0be3b2, #00c2cb 120.11%);
-  color: #fff;
-}
-@media only screen and (max-width: 575.98px) {
-  .btn-primary-custom {
-    font-size: 14px;
-  }
-}
-
-.btn-appstore {
-  display: inline-block;
-  border: 1px solid #00C2CB;
-  padding: 12px;
-  border-radius: 8px;
-  text-align: center;
-}
-.btn-appstore:hover {
-  background: linear-gradient(143.47deg, #0be3b2, #00c2cb 120.11%);
-  color: #fff;
-}
-.btn-appstore:hover path {
-  fill: #fff;
-}
-.btn-appstore:hover img {
-  filter: invert(100%) sepia(100%) saturate(20%) hue-rotate(326deg) brightness(106%) contrast(105%);
-}
-
-.btn-login-mobile {
-  display: none;
-}
-@media only screen and (max-width: 1199.98px) {
-  .btn-login-mobile {
-    display: inline-block;
-  }
-}
-
-.btn-secondary {
-  background-color: #00C2CB;
-  color: #d60e00;
-  border-color: #00C2CB;
-}
-.btn-secondary:hover {
-  background-color: #70F5E4;
-  border-color: #70F5E4;
-}
-
-.btn-warning {
-  background: #C19E74;
-  border: 1px solid #C19E74;
-  color: #fff;
-  border: 1px solid #C19E74;
-}
-.btn-warning:hover {
-  background-color: #fff;
-  border: 1px solid #C19E74;
-  color: #C19E74;
-}
-
-.btn-warning-two {
-  background: #BA8A51;
-  border: 1px solid #BA8A51;
-  color: #fff;
-}
-.btn-warning-two:hover {
-  background-color: #fff;
-  border: 1px solid #be9665;
-  border: 1px solid #be9665;
-  color: #BA8A51;
-}
-
-.btn-success {
-  background-color: #16B056;
-  border: 1px solid #16B056;
-  color: #fff;
-}
-.btn-success:hover {
-  background-color: #fff;
-  border: 1px solid #16B056;
-  color: #16B056;
+.btn.btn-primary:not(:disabled):not(.disabled):active:focus, .btn.btn-primary:not(:disabled):not(.disabled).active:focus {
+  box-shadow: inset 0px 0px 0px 1px #ff4f42, inset 0px -56px 0px #ff4f42;
 }
 
 .btn-ripple {
@@ -12091,56 +12031,64 @@ input[type=checkbox]:checked:disabled + label:before {
   animation: ripple 1s linear infinite;
 }
 
-.whatapp-btn {
-  display: inline-block;
-  position: fixed;
-  bottom: 70px;
-  right: -100px;
-  width: 54px;
-  height: 54.32px;
-  line-height: 50px;
+.backtop {
+  position: relative;
+  margin: 0 auto;
+  height: 64px;
+  width: 180px;
+  color: #d60e00;
+  cursor: pointer;
+}
+.backtop:hover p {
+  opacity: 1;
+  padding-top: 0px;
+  font-size: 14px;
+}
+.backtop:hover span {
+  top: 22px;
+  width: 20px;
+}
+.backtop:hover span:nth-child(1) {
+  left: calc(50% - 5px);
+  transform: rotate(180deg);
+}
+.backtop:hover span:nth-child(2) {
+  right: calc(50% - 5px);
+  transform: rotate(-180deg);
+}
+.backtop p {
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  margin-bottom: 50px;
+  opacity: 0;
+  transition: all 0.6s ease;
+  -webkit-transition: all 0.6s ease;
+  padding-top: 10px;
   text-align: center;
-  background-color: #0A990A;
-  border-radius: 16px 0 0 16px;
-  z-index: 100;
-  transition: 0.4s ease;
+  margin: 0 auto;
 }
-.whatapp-btn:hover {
-  background-color: #11b911;
+.backtop span {
+  width: 20px;
+  height: 2px;
+  left: calc(50% - 10px);
+  position: absolute;
+  content: "";
+  top: 20px;
+  border-radius: 20px;
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  background-color: #d60e00;
 }
-.whatapp-btn.active {
-  right: 0px;
+.backtop span:nth-child(1) {
+  transform: rotate(45deg);
+  margin-left: 6px;
+  z-index: 1;
 }
-@media only screen and (max-width: 575.98px) {
-  .whatapp-btn {
-    display: none;
-  }
-}
-
-.scrolltop-btn {
-  display: inline-block;
-  position: fixed;
-  bottom: 130px;
-  right: -100px;
-  width: 54px;
-  height: 54.32px;
-  line-height: 50px;
-  text-align: center;
-  background-color: #000000;
-  border-radius: 16px 0 0 16px;
-  z-index: 100;
-  transition: 0.4s ease;
-}
-.scrolltop-btn:hover {
-  background-color: #131212;
-}
-.scrolltop-btn.active {
-  right: 0px;
-}
-@media only screen and (max-width: 575.98px) {
-  .scrolltop-btn {
-    display: none;
-  }
+.backtop span:nth-child(2) {
+  transform: rotate(-45deg);
+  margin-left: -7px;
+  z-index: 1;
 }
 
 @keyframes ripple {
@@ -12158,97 +12106,6 @@ input[type=checkbox]:checked:disabled + label:before {
 /*-----------------------------------------
 //////////////// WHATAPPS /////////////////
 -----------------------------------------*/
-.btn-show-more,
-.btn-show-less {
-  position: relative;
-  z-index: 100;
-  display: inline-block;
-  border: none;
-  margin: 0;
-  text-decoration: none;
-  background: transparent;
-  color: #0BAC4B;
-  cursor: pointer;
-  text-align: center;
-  font-size: 16px;
-  font-weight: 700;
-}
-@media only screen and (max-width: 575.98px) {
-  .btn-show-more,
-.btn-show-less {
-    font-size: 10px;
-  }
-}
-
-.button-gotop {
-  transition: all 0.3s cubic-bezier(0, 1.01, 0.4, 1.9);
-  filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.15));
-  opacity: 0;
-  transition: 0.4s ease;
-}
-.button-gotop.active {
-  opacity: 1;
-}
-@media only screen and (max-width: 767.98px) {
-  .button-gotop__icon {
-    width: 40px;
-    height: 40px;
-  }
-}
-
-.button-wa {
-  transition: all 0.3s cubic-bezier(0, 1.01, 0.4, 1.9);
-  filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.15));
-}
-@media only screen and (max-width: 767.98px) {
-  .button-wa__icon {
-    width: 40px;
-    height: 40px;
-  }
-}
-
-.button-footer {
-  display: grid;
-  grid-template-columns: 56px;
-  gap: 18px;
-  position: fixed;
-  right: 60px;
-  bottom: 156px;
-  z-index: 2000;
-}
-@media only screen and (max-width: 767.98px) {
-  .button-footer {
-    grid-template-columns: 32px;
-    gap: 18px;
-    right: 32px;
-    bottom: 139px;
-  }
-}
-
-.mobile-chat-container {
-  background-color: #0be3b2 !important;
-  bottom: 80px !important;
-  right: 60px !important;
-}
-@media only screen and (max-width: 767.98px) {
-  .mobile-chat-container {
-    right: 28px !important;
-    padding: 8px !important;
-    width: 22px !important;
-    height: 24px !important;
-    box-shadow: none;
-  }
-  .mobile-chat-container .fa-comments {
-    position: relative;
-    top: -8px;
-    width: 20px;
-    height: 20px;
-    background-repeat: no-repeat;
-    background-size: 20px 20px;
-    vertical-align: middle;
-  }
-}
-
 .social-icons {
   margin: 0px;
   list-style: none;

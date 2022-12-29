@@ -36,8 +36,8 @@
             <div class="swiper-pagination banner-slider-pagination"></div>
 
             <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev banner-slider-prev"></div>
-            <div class="swiper-button-next banner-slider-next"></div>
+            <!-- <div class="swiper-button-prev banner-slider-prev"></div>
+            <div class="swiper-button-next banner-slider-next"></div> -->
         </div>
     </section>
 
@@ -45,6 +45,7 @@
     get_template_part('template-parts/sections/home', 'welcome');
     get_template_part('template-parts/sections/home', 'programstudi');
     get_template_part('template-parts/sections/home', 'testimonial');
+    get_template_part('template-parts/sections/home', 'news');
     ?>
 
     <!-- <section class="home-welcome section-padding">

@@ -1,8 +1,13 @@
 @use '../config/_variable.scss' as *;
 @use '../config/_mixin.scss' as *;
 @use '../components/cards/_card-testimonial.scss' as *;
+@use '../base/_animations.scss' as *;
 
 .testimonial{
+    position: relative;
+    overflow: hidden;
+    background-color: $white;
+   
     .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
         bottom: -50px;
         left: 0;

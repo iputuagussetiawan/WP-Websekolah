@@ -60,7 +60,6 @@
                 ?>
             </div>
             <div class="btn-mobile-wrapper">
-                <a href="https://insurance.liveaman.com/login" class="btn-primary-custom btn-login-mobile">Login</a>
                 <!-- <button aria-label="navbar toggler" class="navbar-toggler navbar-custom__toggler" type="button" aria-expanded="false">
 
                 </button> -->
