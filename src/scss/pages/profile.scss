@@ -1,0 +1,58 @@
+@use  '../config/_variable.scss' as *;
+@use  '../config/_mixin.scss' as *;
+@use '../sections/_program-studi.scss' as *;
+@use '../sections/_testimonial.scss' as *;
+@use '../sections/_guru.scss' as *;
+
+main{
+    margin-top: 0px;
+}
+
+.about-us {
+	position: relative;
+	background-color: $white;
+	&__inner {
+		position: relative;
+		top: -100px;
+	}
+	&__info-container {
+        height: 100%;
+		padding: 70px 44px;
+        background-color: #f5f5f5;
+	}
+	&__description-container {
+		background-color: $white;
+		padding: 70px 50px;
+	}
+
+	&__info-wrapper {
+		position: relative;
+		&::before {
+			content: "";
+			position: absolute;
+			// background: url(../../images/left-quotes-sign.svg);
+			// background-size: contain;
+			// background-repeat: no-repeat;
+			top: -20px;
+			left: -20px;
+			width: 80px;
+			height: 80px;
+		}
+	}
+	&__title {
+		margin-bottom: 54px;
+		font-size: 36px;
+		font-weight: 600;
+		text-transform: uppercase;
+		color: $primary;
+	}
+	&__info {
+		font-size: 24px;
+		font-style: italic;
+		color: #515f6b;
+	}
+	&__description {
+		margin-bottom: 24px;
+		line-height: 1.5;
+	}
+}

@@ -11352,6 +11352,37 @@ a:hover {
   margin-bottom: 80px;
 }
 
+/*-----------------------------------------
+/////////////// PAGE HEADER ///////////////
+-----------------------------------------*/
+.page-header {
+  position: relative;
+  height: calc(100vh - 128px);
+  background-color: #000000;
+  border-bottom: 5px solid #d60e00;
+}
+.page-header__title {
+  position: absolute;
+  bottom: 150px;
+  font-size: 42px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.page-header__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0.7;
+}
+
+/*-----------------------------------------
+/////////////////////////// PAGE HEADER END
+-----------------------------------------*/
 main {
   margin-top: 109px;
 }
@@ -11367,6 +11398,7 @@ main {
 }
 
 .footer {
+  position: relative;
   background-color: #f6f8fd;
 }
 .footer .navbar-brand {
@@ -13378,6 +13410,10 @@ input[type=checkbox]:checked:disabled + label:before {
 
 .grecaptcha-badge {
   display: none;
+}
+
+.box-shadow {
+  box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
 }
 
 /*# sourceMappingURL=app.css.map*/

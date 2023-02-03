@@ -51,7 +51,7 @@
                     $event_date_end_a = date_i18n("s", $event_date_end_timestamp);
 
                     if ($event_date_start_month == $event_date_end_month) {
-                        $eventDate = $event_date_start_day . '-' . $event_date_end_day . ' ' . $event_date_start_month . ' ' . $event_date_start_g . ':' . $event_date_start_i . '-' . $event_date_end_g . ':' . $event_date_end_i;
+                        $eventDate = $event_date_start_day . '-' . $event_date_end_day . ' ' . $event_date_start_month . ' ' . $event_date_start_year . ', ' . $event_date_start_g . ':' . $event_date_start_i . '-' . $event_date_end_g . ':' . $event_date_end_i;
                     } else {
                         $eventDate = $event_date_start_day . ' ' . $event_date_start_month . ' ' . $event_date_start_year . '-' . $event_date_end_day . ' ' . $event_date_end_month . ' ' . $event_date_end_year . ' ' . $event_date_start_g . ':' . $event_date_start_i  . '-' . $event_date_end_g . ':' . $event_date_end_i;
                     }

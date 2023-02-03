@@ -71,7 +71,6 @@ class Navbar {
             })
         })
     }
-
     dropdownClick = () => {
         console.log('return click dropdown');
     }

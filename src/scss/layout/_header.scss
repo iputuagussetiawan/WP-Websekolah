@@ -1,6 +1,7 @@
 @use "../config/variable" as *;
 @use '../config/mixin' as *;
 
+// ANCHOR TOP-MENU
 .top-menu{
     border-bottom: 1px solid $neutral-30;
     &__inner{
@@ -21,7 +22,6 @@
             margin-right: 0px;
         }
     }
-
     &__link{
         text-transform: uppercase;
         color: $neutral-70;
@@ -30,7 +30,7 @@
       
     }
 }
-
+// ANCHOR NAVBAR-CUSTOM
 .navbar-custom{
     display: block;
     position: fixed;
@@ -40,18 +40,14 @@
     background-color: $white;
     transition: 0.4s ease;
     z-index: 20;
-    // box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
-
     &.show{
         top: 0px;
         box-shadow: $box-shadow-100;
         background-color: $white; 
     }
-
     &.hide{
         top: -250px;
     }
-
     .navbar-nav{
         .nav-item{
             margin-right: 27px;
@@ -428,6 +424,7 @@
         }
     }
 }
+// ANCHOR NAVBAR-BRAND
 .navbar-brand{
     display: inline-block;
     margin: 0px;
@@ -447,20 +444,7 @@
 
 
 }
-
-.navbar-collapse {
-    @media only screen and (max-width: 991.98px) {
-        max-height: 100vh;
-        overflow: auto;
-        padding-bottom: 80px;
-        transition: 0.2s ease;
-
-        &.collapse {
-            height: 100vh;
-        }
-    }
-}
-
+// ANCHOR NAVBAR-POLYLANG
 .pll-parent-menu-item{
     order: 10;
     &:hover > a::before{

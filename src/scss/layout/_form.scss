@@ -1,5 +1,6 @@
 @use "../config/_variable.scss" as *;
 
+// ANCHOR LABEL
 label {
 	font-weight: 400;
 	font-size: 20px;
@@ -11,22 +12,17 @@ label {
 	}
 }
 
-/* Chrome, Safari, Edge, Opera */
+// ANCHOR INPUT
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
 	-webkit-appearance: none;
 	margin: 0;
 }
-
-/* Firefox */
 input[type="number"] {
 	-moz-appearance: textfield;
 }
 
-/*-----------------------------------------
-//////////////// FORM SETUP ///////////////
------------------------------------------*/
-
+// ANCHOR FORM-CONTROL
 .form-control-custom,
 .input-text  {
 	position: relative;
@@ -75,13 +71,7 @@ input[type="number"] {
 	color: #CB3A31;
 }
 
-/*-----------------------------------------
-//////////////////////////////// FORM SETUP
------------------------------------------*/
-
-/*-----------------------------------------
-////////// SPINNER FORM SETUP /////////////
------------------------------------------*/
+// ANCHOR SPINNER INPUT
 .spinner-input {
 	display: flex !important;
     max-width: 200px;
@@ -134,202 +124,9 @@ input[type="number"] {
 		}
 	}
 }
-/*-----------------------------------------
-//////////////////////// SPINNER FORM SETUP
------------------------------------------*/
-
-input[type=checkbox] + label {
-	display: block;
-	cursor: pointer;
-	font-family: 'Arial';
-
-	font-weight: 400;
-    font-size: 20px;
-    line-height: 35px;
-    color: #29292A;
-
-  }
-  
-  input[type=checkbox] {
-	display: none;
-  }
-  
-  input[type=checkbox] + label:before
-  {
-	content: "\2714";
-	border: 1px solid  #607D8B;
-	border-radius: 0;
-	display: inline-block;
-	width: 35px;
-	height: 35px;
-	margin-right: 16px;
-	vertical-align: bottom;
-	color: transparent;
-	transition: .2s;
-	text-align: center;
-  }
-  
-  input[type=checkbox] + label:active:before {
-	//transform: scale(0);
-  }
-  
-  input[type=checkbox]:checked + label:before {
-	background-color: #607D8B;
-	border-color: #607D8B;
-	color: #fff;
-  }
-  
-  input[type=checkbox]:disabled + label:before {
-	//transform: scale(1);
-	border-color: #aaa;
-  }
-  
-  input[type=checkbox]:checked:disabled + label:before {
-	//transform: scale(1);
-	background-color: #F7C28F;
-	border-color: #F7C28F;
-  }
 
 
-  /*リセット */
-.c-check__checkbox,
-.input-checkbox {
-	margin: 0;
-	padding: 0;
-	background: none;
-	border: none;
-	border-radius: 0;
-	outline: none;
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
-  }
-  
-  /* チェックボックスデザイン */
-  .c-check__checkbox,
-  .input-checkbox {
-	cursor: pointer;
-	padding-left: 2rem; /*label手前にチェックボックス用の余白を開ける*/
-	vertical-align: middle;
-	position: relative;
-  }
-  
-  .c-check__checkbox::before,
-  .c-check__checkbox::after,
-  .input-checkbox::before,
-  .input-checkbox::after {
-	content: "";
-	display: block;
-	position: absolute;
-  }
-  
-  .c-check__checkbox::before,
-  .input-checkbox::before {
-	background-color: #fff;
-	border-radius: 0%;
-	border: 1px solid #666464;
-	width: 1.5rem; /*チェックボックスの横幅*/
-	height: 1.5rem; /*チェックボックスの縦幅*/
-	transform: translateY(-50%);
-	top: 50%;
-	left: .25rem;
-  }
-  
-  .c-check__checkbox::after,
-  .input-checkbox::after {
-	border-bottom: 3px solid #666464; /*チェックの太さ*/
-	border-left: 3px solid #666464; /*チェックの太さ*/
-	opacity: 0; /*チェック前は非表示*/
-	height: 8px; /*チェックの高さ*/
-	width: 15px; /*チェックの横幅*/
-	transform: rotate(-45deg);
-	top: -6px; /*チェック時の位置調整*/
-	left: 9px; /*チェック時の位置調整*/
-	transition: opacity .3s;
-  }
-  
-  .c-check__checkbox:checked::after,
-  .input-checkbox:checked::after {
-	opacity: 1; /*チェック後表示*/
-  }
-  
-  .c-check__label {
-	  cursor: pointer;
-  }
 
-  .wpcf7-form-control-wrap{
-	position: relative;
-  }
-
-  .custom-select {
-	width: 100%;
-	position: relative;
-	font-size: 18px;
-    line-height: 28px;
-  }
-  
-  .custom-select select,
-  .wpcf7-form-control-wrap select {
-	display: none; /*hide original SELECT element: */
-  }
-  
-  .select-selected {
-		background-color: $white;
-		border: 1px solid #9E9E9E;
-  }
-  
-  /* Style the arrow inside the select element: */
-  .select-selected:after {
-	position: absolute;
-	content: "";
-	top: 22px;
-	right: 10px;
-	width: 0;
-	height: 0;
-	border: 6px solid transparent;
-	border-color: $black transparent transparent transparent;
-
-  }
-  
-  /* Point the arrow upwards when the select box is open (active): */
-  .select-arrow-active.select-arrow-active{
-	border-color:$secondary-80;
-  }
-  .select-selected.select-arrow-active:after {
-	border-color: transparent transparent $black transparent;
-	top: 16px;
-  }
-  
-  /* style the items (options), including the selected item: */
-  .select-items div,.select-selected {
-	margin-bottom: 4px;
-	padding: 12px 16px;
-	color: $neutral-90;
-	cursor: pointer;
-	border-radius: 6px;
-  }
-  
-  /* Style items (options): */
-  .select-items {
-	position: absolute;
-	background-color: $white;
-	top: 100%;
-	left: 0;
-	right: 0;
-	padding: 16px;
-	z-index: 99;
-	box-shadow: 0px 27px 72px rgba(48, 52, 77, 0.07), 0px 6.0308px 16.0821px rgba(48, 52, 77, 0.0417275), 0px 1.79553px 4.78807px rgba(48, 52, 77, 0.0282725);
-	border-radius: 8px;
-  }
-  
-  /* Hide the items when the select box is closed: */
-  .select-hide {
-	display: none;
-  }
-  
-  .select-items div:hover, .same-as-selected {
-	background: #E0E1EB;
-  }
 
 
   

@@ -459,6 +459,7 @@
 }
 
 .programstudi {
+  position: relative;
   background-color: #f6f8fd;
 }
 .programstudi__grid {

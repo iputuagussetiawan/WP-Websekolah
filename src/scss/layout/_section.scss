@@ -1,54 +1,17 @@
 @use "../config/_variable.scss" as *;
 
 :root {
-	--section-padding: 100px;
-	--margin-bottom-title-wrapper: 50px;
-	--font-size-section-title: 40px;
-	--line-height-section-title: 50px;
-	--font-size-section-title-description: 18px;
+	--section-padding: clamp(40px, 10vh, 120px);
+	--margin-bottom-title-wrapper:clamp(32px, 2.604vw, 50px);
+	--font-size-section-title:clamp(24px, 2.083vw, 40px);
+	--line-height-section-title: 1.5;
+	--font-size-section-title-description:clamp(14px, 0.938vw, 18px);
+	--font-size-section-content:clamp(14px, 0.938vw, 18px);
 	--margin-bottom-section-title: 8px;
 }
 
-@media only screen and (max-width: 1399.98px) {
-	:root {
-		--section-padding: 80px;
-		--margin-bottom-title-wrapper: 42px;
-	}
-}
 
-@media only screen and (max-width: 1199.98px) {
-	:root {
-		--section-padding: 60px;
-		--font-size-section-title: 37px;
-		--line-height-section-title: 42px;
-		--font-size-section-title-description: 16px;
-	}
-}
-
-@media only screen and (max-width: 991.98px) {
-	:root {
-		--section-padding: 40px;
-		--font-size-section-title: 32px;
-	}
-}
-
-@media only screen and (max-width: 767.98px) {
-	:root {
-		--font-size-section-title: 27px;
-		--margin-bottom-title-wrapper: 32px;
-		--font-size-section-title-description: 18px;
-	}
-}
-
-@media only screen and (max-width: 575.98px) {
-	:root {
-		--font-size-section-title: 24px;
-		--font-size-section-title-description: 16px;
-	}
-}
-/*-----------------------------------------
-//////////// SECTION PADDING //////////////
------------------------------------------*/
+// ANCHOR PADDING
 .section-padding {
 	padding-top: var(--section-padding);
 	padding-bottom: var(--section-padding);
@@ -64,13 +27,7 @@
 		padding-bottom: 0px;
 	}
 }
-/*-----------------------------------------
-/////////////////////// SECTION PADDING END
------------------------------------------*/
-
-/*-----------------------------------------
-////////////// SECTION TITLE //////////////
------------------------------------------*/
+// ANCHOR TITLE 
 .section-title-wrapper {
 	position: relative;
 	margin-bottom: var(--margin-bottom-title-wrapper);
@@ -113,19 +70,9 @@
 		}
 	}
 }
-
-.section-subtitle{
-	margin-bottom: 4px;
-	font-size: 18px;
-	color: $primary;
-	text-transform: uppercase;
-	letter-spacing: 1.5px;
-}
-
+// ANCHOR CONTENT 
 .section-content{
-	font-size: 16px;
+	font-size:var(--font-size-section-content);
 	line-height: 1.75;
 }
-/*-----------------------------------------
-///////////////////////// SECTION TITLE END
------------------------------------------*/
+

@@ -20,9 +20,10 @@ mix.js('src/js/app.js', '/build/js/')
     .js('src/js/pages/home.js', '/build/js/')
     .js('src/js/pages/news.js', '/build/js/')
     .js('src/js/pages/single.js', '/build/js/')
-
+    .js('src/js/pages/profile.js', '/build/js/')
     .sass('src/scss/app.scss', './build/css/')
     .sass('src/scss/pages/home.scss', './build/css/')
+    .sass('src/scss/pages/profile.scss', './build/css/')
     .sass('src/scss/pages/articles.scss', './build/css/')
     .sass('src/scss/pages/single.scss', './build/css/')
 

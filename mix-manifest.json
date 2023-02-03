@@ -3,8 +3,10 @@
     "/build/js/home.js": "/build/js/home.js",
     "/build/js/news.js": "/build/js/news.js",
     "/build/js/single.js": "/build/js/single.js",
+    "/build/js/profile.js": "/build/js/profile.js",
     "/build/css/single.css": "/build/css/single.css",
     "/build/css/articles.css": "/build/css/articles.css",
+    "/build/css/profile.css": "/build/css/profile.css",
     "/build/css/home.css": "/build/css/home.css",
     "/build/css/app.css": "/build/css/app.css"
 }

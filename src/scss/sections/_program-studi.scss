@@ -4,6 +4,7 @@
 @use '../components/cards/_card-programstudi.scss' as *;
 
 .programstudi{
+    position: relative;
     background-color: $neutral-25;
     &__grid{
         display: grid;

@@ -35,12 +35,10 @@ var GMap = /*#__PURE__*/function () {
       var map = new google.maps.Map($el, args);
       map.markers = [];
       var that = this;
-
       // add markers
       $markers.forEach(function (x) {
         that.add_marker(x, map);
       });
-
       // center map
       this.center_map(map);
     } // end new_map
@@ -53,14 +51,12 @@ var GMap = /*#__PURE__*/function () {
         map: map
       });
       map.markers.push(marker);
-
       // if marker contains HTML, add it to an infoWindow
       if ($marker.innerHTML) {
         // create info window
         var infowindow = new google.maps.InfoWindow({
           content: $marker.innerHTML
         });
-
         // show info window when marker is clicked
         google.maps.event.addListener(marker, "click", function () {
           infowindow.open(map, marker);
@@ -71,13 +67,11 @@ var GMap = /*#__PURE__*/function () {
     key: "center_map",
     value: function center_map(map) {
       var bounds = new google.maps.LatLngBounds();
-
       // loop through all markers and create bounds
       map.markers.forEach(function (marker) {
         var latlng = new google.maps.LatLng(marker.position.lat(), marker.position.lng());
         bounds.extend(latlng);
       });
-
       // only 1 marker?
       if (map.markers.length == 1) {
         // set center of map

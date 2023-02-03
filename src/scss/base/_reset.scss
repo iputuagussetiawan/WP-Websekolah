@@ -1,12 +1,12 @@
 @use "../config/variable" as *;
-//////// STR RESET //////////////
+// ANCHOR RESET ALL
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 	-webkit-tap-highlight-color: transparent;
 }
-
+// ANCHOR RESET BODY
 body {
 	font-family:$primary-font;
 	color: $neutral-70;
@@ -16,7 +16,7 @@ body {
 		overflow: hidden;
 	}
 }
-
+// ANCHOR RESET SCROLL BAR
 ::-webkit-scrollbar {
 	width: 8px;
 	height: 8px;
@@ -32,11 +32,13 @@ body {
 	color: #ffffff;
 }
 
+// ANCHOR RESET MOUSE SELECTION
 ::selection {
 	background-color: $primary;
 	color: #ffffff;
 }
 
+// ANCHOR RESET LINK
 a {
 	color: $primary;
 	transition: 0.4s ease;
@@ -46,6 +48,4 @@ a {
 		color: $primary;
 	}
 }
-/*-----------------------------------------
-////////////////// END RESET //////////////
------------------------------------------*/
+

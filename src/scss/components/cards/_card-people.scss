@@ -1,0 +1,30 @@
+@use "../../config/_variable.scss" as *;
+@use "../../config/_mixin.scss" as *;
+.card-people{
+    @include imageRatio(318,376);
+
+    &:hover &__image{
+        transform: scale(1.2);
+    }
+    &__image-container{
+        overflow: hidden;
+        margin-bottom: 24px;
+    }
+
+    &__image{
+        transition: 1s ease;
+    }
+
+    &__name{
+        font-size: 24px;
+        font-weight: 600;
+        color: $primary;
+        text-align: center;
+    }
+
+    &__position{
+        font-size: 20px;
+        font-style: italic;
+        text-align: center;
+    }
+}

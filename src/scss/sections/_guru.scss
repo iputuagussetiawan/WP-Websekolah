@@ -1,0 +1,14 @@
+@use '../config/variable' as *;
+@use '../config/mixin' as *;
+
+@use '../components/cards/_card-people.scss' as *;
+
+
+.guru{
+  &__grid{
+    margin-bottom: 64px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 64px 42px;
+  }
+}
